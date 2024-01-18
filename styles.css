@@ -1,0 +1,140 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Set position to relative to allow absolute positioning of pseudo-element */
+  background: url('https://source.unsplash.com/1600x900/?landscape') no-repeat center center;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Use the same background image as the body */
+  filter: blur(6px); /* Apply a 1px blur effect to the pseudo-element */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+.card {
+  background: #000000d0;
+  color: whitesmoke;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+button {
+  margin: 1.7em;
+  border-radius: 50%;
+  border: none;
+  height: 45px;
+  width: 45px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.searchbar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: whitesmoke;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after{
+  visibility: visible;
+  content: "Loading....";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px #00000056;
+}
+
+.searchbar:hover {
+  transform: scale(1.07);
+}
+
+.credits {
+  margin-top: 1em;
+  background-color: transparent; /* Set background color to transparent */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(10px); /* Apply a backdrop filter with a blur effect */
+}
+.credits h2 {
+  margin-bottom: 10px;
+}
+
+.credits p {
+  margin-bottom: 1px;
+}
+
+.credits a {
+  color: #55aaff; /* Link color */
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
