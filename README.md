@@ -3,7 +3,7 @@ This is a simple web page that displays weather information for a specific locat
 
 ## Demo
 
-You can see a live demo of the project [here](#).
+You can see a live demo of the project [here](https://whats-the-weather-project.netlify.app/).
 
 ## Features
 
